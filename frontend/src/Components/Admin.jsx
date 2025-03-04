@@ -19,7 +19,7 @@ const changeHandler = (e)=>{
 
 
     useEffect(() => {
-        axios.get("http://localhost:8080/api/getads").then((res) => {
+        axios.get(`${ADS_API}/getads`).then((res) => {
             setAds(res.data);
         });
     }, []);
