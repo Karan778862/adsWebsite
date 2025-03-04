@@ -14,7 +14,7 @@
     fetch("https://desiads.onrender.com/api/ads/random")
         .then(response => response.json())
         .then(ad => {
-            console.log(ad)
+           
             adContainer.innerHTML = `<a href="${ad.targetUrl}" target="_blank">
                 <img src="${ad.imageUrl}" style="width:100%; height:100%;" />
                 
