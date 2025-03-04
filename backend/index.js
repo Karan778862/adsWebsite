@@ -17,12 +17,12 @@ const _dirname = path.resolve();
 app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
-const corsOptions = {
-    origin:'https://desiads.onrender.com/',
-    credentials:true
-};
-app.use(cors({ origin: "*" }));
-app.use(cors(corsOptions));
+
+app.use(cors({
+    origin: "*", // 👈 Sabhi origins allow karne ke liye
+    methods: ["GET", "POST"], // 👈 Sirf allowed methods specify karo
+    allowedHeaders: ["Content-Type"]
+}));
 
 
 app.use("/api",adsRouter)
