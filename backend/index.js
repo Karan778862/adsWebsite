@@ -18,7 +18,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 const corsOptions = {
-    origin:'http://localhost:5173',
+    origin:'https://desiads.onrender.com/',
     credentials:true
 };
 app.use(cors(corsOptions));

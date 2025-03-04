@@ -1,1 +1,1 @@
-export const ADS_API = "http://localhost:8080/api"
+export const ADS_API = "https://desiads.onrender.com/api"

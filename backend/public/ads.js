@@ -11,7 +11,7 @@
     document.body.appendChild(adContainer);
 
     // Backend se ad fetch karna
-    fetch("http://localhost:8080/api/ads/random")
+    fetch("https://desiads.onrender.com/api/ads/random")
         .then(response => response.json())
         .then(ad => {
             console.log(ad)
@@ -22,7 +22,7 @@
 
             
             adContainer.querySelector("a").addEventListener("click", () => {
-                fetch(`http://localhost:8080/api/ads/click/${ad._id}`, { method: "POST" });
+                fetch(`https://desiads.onrender.com/api/ads/click/${ad._id}`, { method: "POST" });
             });
         })
         .catch(err => {
