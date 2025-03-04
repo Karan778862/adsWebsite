@@ -21,6 +21,7 @@ const corsOptions = {
     origin:'https://desiads.onrender.com/',
     credentials:true
 };
+app.use(cors({ origin: "*" }));
 app.use(cors(corsOptions));
 
 
